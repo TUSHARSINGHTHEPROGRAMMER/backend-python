@@ -184,7 +184,7 @@ def capture_camera_feed(camera_name, camera_config):
             print(f"Error capturing feed for {camera_name}: {e}")
             time.sleep(10)
 
-@app.route('/get_all_slot_status', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_all_slot_status():
     return jsonify(all_slots_status)
 
