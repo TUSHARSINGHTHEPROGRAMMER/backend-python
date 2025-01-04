@@ -67,7 +67,8 @@ camera_slots = {
 
 # Load YOLOv5 model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-yolo_model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True).to(device)
+yolo_model = torch.hub.load('./yolov5', 'yolov5s', source='local').to(device)
+
 
 # Global variables
 all_slots_status = {}
